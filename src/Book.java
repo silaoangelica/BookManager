@@ -50,6 +50,6 @@ public class Book {
     //format: [ ] 1. Title - Author
     public String toString(){
         return String.format("[%s] %d. %s - %s",
-                markAsCompleted ? "x" : " ", id, title, author);
+                markAsCompleted ? "✓" : "x", id, title, author);
     }
 }

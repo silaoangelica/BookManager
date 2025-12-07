@@ -11,6 +11,10 @@ public class BookManager {
     //add an id bc we need to increment
     private int id = 1;
 
+    public BookManager(){
+        this.books = new ArrayList<>();
+    }
+
     //create
     public Book createBook(String author, String title){
         if(author == null || title == null){
@@ -39,7 +43,7 @@ public class BookManager {
     }
 
     //delete book based on given id
-    public boolean deleteBook(int id, String author, String title){
+    public boolean deleteBook(int id){
         for(Book b: books){
             if(b.getId() == id){
                 books.remove(id);
